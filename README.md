@@ -1,4 +1,4 @@
-![image](https://github.com/Ilya-Zhirukhin/for_devops_hw/assets/99948155/0cae7dc5-6036-49d2-9340-6b41c5eb423c)# for_devops_hw_1
+# for_devops_hw_1
 
 Создайте новый файл с расширением .sh, например, create_user_dirs.sh, и скопируйте в него код скрипта.
 

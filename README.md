@@ -68,3 +68,28 @@ directory_path: путь к директории, которую нужно со
 ansible-playbook -i inventory.ini playbook.yml
 После выполнения playbook на удаленном сервере будет создан пользователь, настроена авторизация по SSH-ключу, отключена авторизация по паролю и создана директория с указанными правами.
 
+# for_hw_devops_3
+
+Создание структуры роли
+
+каталог роли и вложенные каталоги:
+mkdir -p ansible-role-user-setup/{tasks,vars,defaults,meta,molecule/default}
+cd ansible-role-user-setup
+
+файлы для задач, переменных, и т.д.:
+touch tasks/main.yml
+touch vars/main.yml
+touch defaults/main.yml
+touch meta/main.yml
+touch molecule/default/molecule.yml
+touch molecule/default/converge.yml
+touch molecule/default/verify.yml
+
+Инициализация Molecule и запуск тестов:
+
+molecule init scenario --role-name ansible-role-user-setup --driver-name docker
+molecule test
+
+в итоге создаем базовую конфигурацию для роли Ansible, которая создаёт пользователя, настраивает SSH авторизацию по ключам, отключает аутентификацию по паролю и создаёт директорию в /opt/. Molecule поможет вам тестировать роль в контейнере Docker, что упрощает разработку и тестирование Ansible ролей.
+
+

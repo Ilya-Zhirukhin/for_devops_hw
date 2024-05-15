@@ -1,4 +1,4 @@
-# for_devops_hw_1
+![image](https://github.com/Ilya-Zhirukhin/for_devops_hw/assets/99948155/0cae7dc5-6036-49d2-9340-6b41c5eb423c)# for_devops_hw_1
 
 Создайте новый файл с расширением .sh, например, create_user_dirs.sh, и скопируйте в него код скрипта.
 
@@ -91,5 +91,16 @@ molecule init scenario --role-name ansible-role-user-setup --driver-name docker
 molecule test
 
 в итоге создаем базовую конфигурацию для роли Ansible, которая создаёт пользователя, настраивает SSH авторизацию по ключам, отключает аутентификацию по паролю и создаёт директорию в /opt/. Molecule поможет вам тестировать роль в контейнере Docker, что упрощает разработку и тестирование Ansible ролей.
+
+
+
+# for_hw_devops_4
+
+docker build -t zhiruhin_ii_image_$(date +%F) .
+![image](https://github.com/Ilya-Zhirukhin/for_devops_hw/assets/99948155/0298011f-56fc-48a8-808c-2f0ab54838f8)
+слои и размер на диске
+docker history zhiruhin_ii_umage2024-05-15
+![image](https://github.com/Ilya-Zhirukhin/for_devops_hw/assets/99948155/4dfe5cdb-b114-4eac-ad78-d57122118c78)
+
 
 
